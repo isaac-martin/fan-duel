@@ -1,3 +1,3 @@
-# Fan Duel FED
+# Fan Duel Static
 
-Two branches, one called static, one called react. ReadMe for running both of those on each branch
+Static HTML + CSS - Have just used :root css-varaibles + some utility classes rather then a compiler.
