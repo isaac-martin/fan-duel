@@ -1,8 +1,35 @@
+/* reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 :root {
   --gsw-yellow: #fdbb00;
   --okc-blue: #0079c5;
   --body-bg: #bcbcbc;
   --black-blue: #2d363b;
+  --header-hover: #4f5a62;
   --black: #000;
   --white: #ffffff;
   --light-gray: #f2f2f2;
@@ -10,4 +37,134 @@
   --btn-green: #70aa3d;
   --footer-gray: #616a71;
   --footer-dark-gray: #4f5961;
+  --padding-val: 15px;
+}
+
+
+.btn-green {
+  background: var(--btn-green);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.headerRight, .headerLeft{
+  align-self: stretch;
+  display: flex;
+}
+.mainHeader {
+  background: var(--black-blue);
+  padding: 0 var(--padding-val);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subMenuArrow {
+  width: 15px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.logo {
+  padding: 30px 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.logo img {
+  min-width: 200px;
+}
+
+
+.menu{
+  min-height: 100%;
+}
+
+.menu ul {
+  display: flex;
+  height: 100%;
+  margin-left: 30px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu a {
+   background: transparent;
+  transition: background-color 0.5s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: var(--header-hover);
+}
+
+.menu a, .balance div{
+  color: var(--white);
+  text-decoration: none;
+  font-size: 22px;
+  padding: 2px 30px;
+  position: relative;
+}
+
+.mainMenu li:first-of-type a:before, .accountMenu a:before, .accountMenu div:before{
+  content: '';
+  height: 30px;
+  width: 1px;
+  position: absolute;
+  left: 0;
+   top: 50%; 
+  transform: translateY(-50%);
+  background-color:var(--light-gray);
+}
+
+.mainMenu a:after {
+  content: '';
+  height: 30px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 50%; 
+  transform: translateY(-50%);
+  background-color:var(--light-gray);
+}
+
+
+
+.accountMenu .profile a {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.accountMenu .profile img{
+  margin-right: 10px;
+  height: 40px;
+}
+
+
+.balance div {
+  display: flex;
+  align-items: center;
+}
+
+.balance div span {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+
+.funds {
+  font-weight: normal;
 }
