@@ -1,0 +1,660 @@
+/* reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+:root {
+  --gsw-yellow: #fdbb00;
+  --okc-blue: #0079c5;
+  --body-bg: #bcbcbc;
+  --black-blue: #2d363b;
+  --header-hover: #4f5a62;
+  --black: #000;
+  --white: #ffffff;
+  --light-gray: #f2f2f2;
+  --dark-gray: #666666;
+  --green: #71ab3e;
+  --btn-green: #70aa3d;
+  --footer-gray: #616a71;
+  --footer-dark-gray: #4f5961;
+  --padding-val: 15px;
+}
+
+
+
+body {
+  background: var(--body-bg);
+  font-family: Gotham;
+  font-weight: 300;
+}
+
+.btn-green {
+  background: var(--btn-green);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.menuWrapper {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.headerRight, .headerLeft{
+  align-self: stretch;
+  display: flex;
+}
+.mainHeader {
+  background: var(--black-blue);
+  padding: 0 var(--padding-val);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu svg {
+  width: 12px;
+  margin-left: 5px;
+  fill: white;
+}
+
+.logo {
+  padding: 30px 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.logo img {
+  min-width: 120px;
+}
+
+
+.menu{
+  min-height: 100%;
+}
+
+.menu ul {
+  display: flex;
+  height: 100%;
+  margin-left: 30px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu a {
+   background: transparent;
+  transition: background-color 0.5s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: var(--header-hover);
+}
+
+.menu a, .balance div{
+  color: var(--white);
+  text-decoration: none;
+  font-size: 22px;
+  padding: 2px 30px;
+  position: relative;
+}
+
+.mainMenu li:first-of-type a:before, .accountMenu a:before, .accountMenu div:before{
+  content: '';
+  height: 30px;
+  width: 1px;
+  position: absolute;
+  left: 0;
+   top: 50%; 
+  transform: translateY(-50%);
+  background-color:var(--light-gray);
+}
+
+.mainMenu a:after {
+  content: '';
+  height: 30px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 50%; 
+  transform: translateY(-50%);
+  background-color:var(--light-gray);
+}
+
+
+
+.playCard {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray);
+  background: transparent;
+  transition: all 0.5s ease;
+}
+
+.playCard:hover {
+background: rgb(255,248,229);
+background: linear-gradient(3deg, rgba(255,248,229,1) 0%, rgba(255,255,255,1) 49%, rgba(255,255,255,1) 100%);
+}
+
+.playerHeadshot {
+  margin-right: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.playSummary {
+  width: 66%;
+  margin-right: auto;
+  font-size: 12px;
+}
+
+.playSummary .time {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.playScore {
+    width: 80px;
+    margin-left: 20px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.accountMenu .profile a {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.accountMenu .profile img{
+  margin-right: 10px;
+  height: 40px;
+}
+
+
+.balance div {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.balance div span {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+
+.funds {
+  font-weight: normal;
+}
+
+
+
+.main {
+  max-width: 1140px;
+  margin: 15px auto;
+  min-height: calc(100vh - 120px);
+  padding-bottom: 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:400px 400px auto;
+   grid-column-gap: 15px;
+   grid-row-gap: 15px;
+  grid-template-rows: 1fr 1fr;
+}
+
+.overview {
+  grid-column: 1 / 3;
+  background: white;
+  border-radius: 10px;
+}
+
+.yourScoring {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  background: white;
+}
+
+.playByPlay {
+  grid-column: 1 / 2;
+  background: white;
+}
+
+.stats {
+  grid-column: 2 / 3;
+  background: white;
+}
+
+.sectionHeader {
+  background: black;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.sectionHeader h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 0;
+  letter-spacing: -0.5px;
+  padding-top: 3px;
+}
+
+.scoringSubHeader {
+  text-transform: uppercase;
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.scoringSubHeader h5 {
+  font-weight: 300;
+  color: var(--dark-gray);
+}
+
+.scoringSubHeader .green {
+  font-weight: 400;
+  margin-right: 10px;
+  color: var(--green);
+}
+
+
+.scoreCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.teamScore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  padding: 20px 30px;
+  flex: 1;
+}
+
+.teamScore .score {
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.gameInfo {
+  text-align: center;
+    padding: 10px 30px;
+    max-width: 170px;
+  border-left: 1px solid var(--dark-gray);
+  border-right: 1px solid var(--dark-gray);
+  color: var(--dark-gray);
+}
+
+.gameTime {
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: black;
+}
+
+.teamScore.rev {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.textOKC {
+  color: var(--okc-blue);
+}
+
+.textGSW {
+  color: var(--gsw-yellow);
+}
+
+.teamScore .team {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.team span{
+  display: block;
+  font-weight: 600;
+}
+
+
+.lastPlayBar {
+  text-align: center;
+  background: var(--light-gray);
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.selector {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 10px 0;
+}
+ 
+ .selector h3 {
+   display: flex;
+ align-items: center;
+ font-weight: 300;
+ text-transform: uppercase;
+ font-size: 14px;
+ }
+
+ .selector b {
+   margin-left: 5px;
+ }
+
+.selector svg {
+  width: 15px;
+  margin-left: 10px;
+  margin-top: -3px;
+}
+
+.statsWrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shotChart {
+  padding-bottom: 20px;
+}
+
+.shotChart img {
+  width: 480px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--light-gray);
+  color: var(--dark-gray);
+}
+
+.stat:last-of-type {
+  border: none;
+}
+
+.value {
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+
+.gswStat .value {
+  color: var(--gsw-yellow);
+}
+
+.okcStat .value {
+  color: var(--okc-blue);
+}
+
+
+.scoresFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footerNav {
+  background: var(--black-blue);
+}
+
+.footerNav nav {
+  padding-left: 20px;
+}
+
+.footerNav span {
+  font-size: 14px;
+      width: 170px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px 5px;
+    border-right: 1px solid var(--light-gray);
+    color: var(--light-gray);
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+.footerNav span.active {
+  background: var(--green);
+  border: none;
+  color: white;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.footerScores {
+  background: var(--footer-dark-gray);
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  color: var(--white);
+}
+.footerScores .arrow {
+  align-self: center;
+  color: var(--white);
+  font-weight: 200;
+  opacity: 0.7;
+}
+
+.footerScores nav {
+  flex: 1;
+  padding-left: 5px; 
+}
+
+.arrow.left {
+  padding-right: 5px;
+}
+
+
+.gameSummaries {
+  display: flex;
+  flex: 1;
+}
+
+
+.scoreOverview .team {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.scoreOverview .time {
+  font-size: 11px;
+}
+.scoreOverview .score {
+  padding-left: 40px;
+  justify-content: space-around;
+}
+
+
+.mainOverview {
+  display: flex;
+  padding-left: 15px;
+  color: var(--white);
+  padding: 10px 40px 10px 10px;
+  background: var(--footer-gray);
+}
+
+.scoreOverview {
+  padding: 10px;
+}
+
+.mainOverview .scoreOverview {
+  padding: 0;
+}
+
+.mainOverview .time {
+  margin-top: 10px;
+}
+
+.broadcast {
+  padding-left: 10px;
+}
+
+.keyPlayer {
+  padding-left: 40px;
+}
+
+
+.keyPlayer {
+  display: flex;
+  font-size: 14px;
+}
+
+.keyPlayer .team {
+  margin-right: 30px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.keyPlayer .name {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.1;
+  margin-bottom: 3px;
+}
+
+.keyPlayer .points {
+  font-size: 11px;
+  font-weight: 100;
+}
+
+.secondary {
+opacity: 0.4;
+border-right: 1px solid;
+}
+
+.secondary .time {
+  margin-top: 10px;
+}
+
+
+
+
+.mobileMenuTrigger {
+  display: none;
+}
+
+.navTrigger {
+  display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+
+.mobileMenuTrigger {
+  display: block;
+  position: absolute;
+  right: 30px;
+}
+
+.menuWrapper {
+  display: none;
+}
+
+
+#nav:checked ~ .menuWrapper {
+ display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 90px;
+  background: var(--black-blue);
+  padding-bottom: 40px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+a:before, a:after {
+  display: none;
+}
+
+.balance div:before{
+  display: none;
+}
+
+.menu li {
+margin: 10px 0;
+}
+
+.grid {
+  padding: 0 20px 80px 20px;
+  grid-template-columns:1fr;
+  grid-row-gap: 15px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.overview {
+  grid-column: 1;
+  grid-row: 1;
+}
+.playByPlay {
+  grid-column: 1;
+  grid-row: 2;
+}
+.stats {
+  grid-column: 1;
+  grid-row: 3;
+}
+.yourScoring {
+  grid-column: 1;
+  grid-row: 4;
+}
+}

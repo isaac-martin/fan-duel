@@ -1,0 +1,13 @@
+p, li {
+  font-family: Gotham;
+  font-weight: 300;
+}
+
+.menu li a {
+  font-size: 12px;
+}
+
+
+b {
+  font-weight: 500;
+}
