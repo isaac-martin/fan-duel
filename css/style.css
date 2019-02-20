@@ -60,8 +60,9 @@ body {
 
 .menuWrapper {
   display: flex;
-    flex: 1;
-    justify-content: space-between;
+  flex: 1;
+  justify-content: space-between;
+  align-self: stretch;
 }
 
 .headerRight, .headerLeft{
