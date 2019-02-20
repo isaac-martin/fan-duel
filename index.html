@@ -7,7 +7,10 @@
   <meta name="author" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/fonts.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/typography.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -18,7 +21,11 @@
         <ul>
           <li><a href="">Lobby</a></li>
           <li><a href="">Upcoming</a></li>
-          <li><a href="">Live <img class="subMenuArrow" src="assets/down.svg"></a></li>
+          <li><a href="">Live <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+  <path d="M128 332.1c-5.3 0-10.3-2.1-14.1-5.8L9.3 220c-3.7-3.7-5.8-8.7-5.8-14 0-5.3 2.1-10.3 5.8-14l6.4-6.4c3.8-3.8 8.7-5.8 14-5.8 5.3 0 10.3 2.1 14 5.8l84.2 85.8 84.1-85.6c3.8-3.8 8.8-5.9 14.1-5.9 5.3 0 10.3 2.1 14 5.8l6.4 6.4c3.8 3.8 5.8 8.7 5.8 14s-2.1 10.3-5.8 14L142 326.5c-3.8 3.6-8.7 5.6-14 5.6z"/>
+  <path d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"/>
+</svg>
+</a></li>
           <li><a href="">History</a></li>
         </ul>
       </nav>
@@ -26,18 +33,123 @@
     <div class="headerRight">
     <nav class="accountMenu menu">
       <ul>
-        <li><a href="">Help<img class="subMenuArrow" src="assets/down.svg"></a></li>
-        <li class="profile"><a href=""><img src="assets/avatar.png"> nbonaddio<img class="subMenuArrow" src="assets/down.svg"></a></li>
+        <li><a href="">Help<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+  <path d="M128 332.1c-5.3 0-10.3-2.1-14.1-5.8L9.3 220c-3.7-3.7-5.8-8.7-5.8-14 0-5.3 2.1-10.3 5.8-14l6.4-6.4c3.8-3.8 8.7-5.8 14-5.8 5.3 0 10.3 2.1 14 5.8l84.2 85.8 84.1-85.6c3.8-3.8 8.8-5.9 14.1-5.9 5.3 0 10.3 2.1 14 5.8l6.4 6.4c3.8 3.8 5.8 8.7 5.8 14s-2.1 10.3-5.8 14L142 326.5c-3.8 3.6-8.7 5.6-14 5.6z"/>
+  <path d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"/>
+</svg>
+</a></li>
+        <li class="profile"><a href=""><img src="assets/avatar.png"> nbonaddio<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+  <path d="M128 332.1c-5.3 0-10.3-2.1-14.1-5.8L9.3 220c-3.7-3.7-5.8-8.7-5.8-14 0-5.3 2.1-10.3 5.8-14l6.4-6.4c3.8-3.8 8.7-5.8 14-5.8 5.3 0 10.3 2.1 14 5.8l84.2 85.8 84.1-85.6c3.8-3.8 8.8-5.9 14.1-5.9 5.3 0 10.3 2.1 14 5.8l6.4 6.4c3.8 3.8 5.8 8.7 5.8 14s-2.1 10.3-5.8 14L142 326.5c-3.8 3.6-8.7 5.6-14 5.6z"/>
+  <path d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"/>
+</svg>
+</a></li>
         <li class="balance"><div><span><b class="funds">$1,000,000.00</b>Balance</span><button class="btn-green">Add Funds</button></div></li>
       </ul>
     </nav>
     </div>
   </header>
-  <section class="main">
-    <div class="overview"></div>
-    <div class="yourScoring"></div>
-    <div class="stats"></div>
-    <div class="playByPlay"></div>
+  <section class="main grid">
+    <div class="overview">
+      <div class="scoreCard">
+        <div class="teamScore textGSW">
+          <p class="team">Golden State <span>Warriors</span></p>
+          <p class="score">96</p>
+        </div>
+        <div class="gameInfo">
+          <p class="gameTime">
+            7:34 4th
+          </p>
+          <p class="gameVenue">
+            Oracle Arena
+            Oakland, CA
+          </p>
+        </div>
+        <div class="teamScore rev textOKC">
+           <p class="team">Oklahoma City <span>Thunder</span></p>
+          <p class="score">81</p>
+        </div>
+      </div>
+      <div class="lastPlayBar">
+        <p>Last Play: TV timeout, go get a snack</p>
+      </div>
+      <div class="gameSummary">
+         <div class="selector"><h3>Show:<b>Recent Shots</b> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+          <path
+            d="M128 332.1c-5.3 0-10.3-2.1-14.1-5.8L9.3 220c-3.7-3.7-5.8-8.7-5.8-14 0-5.3 2.1-10.3 5.8-14l6.4-6.4c3.8-3.8 8.7-5.8 14-5.8 5.3 0 10.3 2.1 14 5.8l84.2 85.8 84.1-85.6c3.8-3.8 8.8-5.9 14.1-5.9 5.3 0 10.3 2.1 14 5.8l6.4 6.4c3.8 3.8 5.8 8.7 5.8 14s-2.1 10.3-5.8 14L142 326.5c-3.8 3.6-8.7 5.6-14 5.6z" />
+          <path
+            d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z" />
+        </svg></h3></div>
+        <div class="statsWrap">
+          <div class="teamStats">
+
+          </div>
+          <div class="shotChart">
+          
+          </div>
+          <div class="teamStats">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="yourScoring">
+        <div class="sectionHeader">
+          <h3>Your Scoring</h3>
+        </div>
+        <div class="scoringSubHeader">
+            <h5 class="green">This game</h5>
+            <h5>All GAmes</h5>
+          </div>
+    </div>
+    <div class="playByPlay">
+       <div class="sectionHeader"><h3>Play By Play</h3></div>
+       <div class="playCardsWrapper">
+         <div class="playCard">
+           <img class="playerHeadshot" src="assets/steph_curry.png">
+            <div class="playSummary">
+              <span class="time">7:34 4th</span>
+              <p><b class="player">Stephen Curry</b> makes 13-foot jumper. Assisted by <b class="player">Draymond Green</b></p>
+            </div>
+            <p class="playScore">96-81, GS</p>
+         </div>
+         <div class="playCard">
+           <img class="playerHeadshot" src="assets/kevin_durant.png">
+            <div class="playSummary">
+              <span class="time">7:34 4th</span>
+              <p><b class="player">Kevin Durant</b> misses 2-foot layup. Rebounded by <b class="player">Andrew Bogurt</b></p>
+            </div>
+            <p class="playScore">96-81, GS</p>
+         </div>
+         <div class="playCard">
+           <img class="playerHeadshot" src="assets/klay_thompson.png">
+            <div class="playSummary">
+              <span class="time">7:34 4th</span>
+              <p><b class="player">Klay Thompson</b> makes 24-foot jumper. Rebounded by <b class="player">Serge Ibaka</b></p>
+            </div>
+            <p class="playScore">96-81, GS</p>
+         </div>
+         <div class="playCard">
+           <img class="playerHeadshot" src="assets/kevin_durant.png">
+            <div class="playSummary">
+              <span class="time">7:34 4th</span>
+              <p><b class="player">Kevin Durant</b> turnover.</p>
+            </div>
+            <p class="playScore">96-81, GS</p>
+         </div>
+         <div class="playCard">
+           <img class="playerHeadshot" src="assets/steph_curry.png">
+            <div class="playSummary">
+              <span class="time">7:34 4th</span>
+              <p><b class="player">Stephen Curry</b> makes free throw.</p>
+            </div>
+            <p class="playScore">96-81, GS</p>
+         </div>
+       </div>
+    </div>
+    <div class="stats">
+      <div class="sectionHeader"><h3>Stats</h3></div>
+    </div>
   </section>
   <footer></footer>
 
