@@ -58,6 +58,12 @@ body {
   font-size: 16px;
 }
 
+.menuWrapper {
+  display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
 .headerRight, .headerLeft{
   align-self: stretch;
   display: flex;
@@ -572,3 +578,82 @@ border-right: 1px solid;
   margin-top: 10px;
 }
 
+
+
+
+.mobileMenuTrigger {
+  display: none;
+}
+
+.navTrigger {
+  display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+
+.mobileMenuTrigger {
+  display: block;
+  position: absolute;
+  right: 30px;
+}
+
+.menuWrapper {
+  display: none;
+}
+
+
+#nav:checked ~ .menuWrapper {
+ display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 90px;
+  background: var(--black-blue);
+  padding-bottom: 40px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+a:before, a:after {
+  display: none;
+}
+
+.balance div:before{
+  display: none;
+}
+
+.menu li {
+margin: 10px 0;
+}
+
+.grid {
+  padding: 0 20px 80px 20px;
+  grid-template-columns:1fr;
+  grid-row-gap: 15px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.overview {
+  grid-column: 1;
+  grid-row: 1;
+}
+.playByPlay {
+  grid-column: 1;
+  grid-row: 2;
+}
+.stats {
+  grid-column: 1;
+  grid-row: 3;
+}
+.yourScoring {
+  grid-column: 1;
+  grid-row: 4;
+}
+}

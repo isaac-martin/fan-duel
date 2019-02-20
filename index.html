@@ -15,8 +15,17 @@
 
 <body>
   <header class="mainHeader">
+    <a class="logo" href="/"><img src="assets/logo.svg"></a>
+     
+        <input id="nav" name="nav" class="navTrigger" type="checkbox">
+        <label for="nav" class="mobileMenuTrigger">
+          <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white"
+              d="M4 10h24a2 2 0 0 0 0-4H4a2 2 0 0 0 0 4zm24 4H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4zm0 8H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4z" />
+          </svg>
+        </label>
+    <div class="menuWrapper">
     <div class="headerLeft">
-      <a class="logo" href="/"><img src="assets/logo.svg"></a>
       <nav class="mainMenu menu">
         <ul>
           <li><a href="">Lobby</a></li>
@@ -47,9 +56,13 @@
       </ul>
     </nav>
     </div>
+    </div>
   </header>
+
+
+
   <section class="main grid">
-    <div class="overview">
+    <div class="overview gridItem">
       <div class="scoreCard">
         <div class="teamScore textGSW">
           <p class="team">Golden State <span>Warriors</span></p>
@@ -139,7 +152,7 @@
       </div>
     </div>
     
-    <div class="yourScoring">
+    <div class="yourScoring gridItem">
         <div class="sectionHeader">
           <h3>Your Scoring</h3>
         </div>
@@ -148,7 +161,7 @@
             <h5>All GAmes</h5>
           </div>
     </div>
-    <div class="playByPlay">
+    <div class="playByPlay gridItem">
        <div class="sectionHeader"><h3>Play By Play</h3></div>
        <div class="playCardsWrapper">
          <div class="playCard">
@@ -193,7 +206,7 @@
          </div>
        </div>
     </div>
-    <div class="stats">
+    <div class="stats gridItem">
       <div class="sectionHeader"><h3>Stats</h3></div>
     </div>
   </section>
