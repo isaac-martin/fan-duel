@@ -427,11 +427,11 @@ background: linear-gradient(3deg, rgba(255,248,229,1) 0%, rgba(255,255,255,1) 49
 }
 
 
-.gswStat .value {
+.GSWStat .value {
   color: var(--gsw-yellow);
 }
 
-.okcStat .value {
+.OKCStat .value {
   color: var(--okc-blue);
 }
 
@@ -518,21 +518,21 @@ background: linear-gradient(3deg, rgba(255,248,229,1) 0%, rgba(255,255,255,1) 49
 }
 
 
-.mainOverview {
+.gameOverview {
+    padding: 10px 40px 10px 10px;
+    opacity: 0.4;
+    border-right: 1px solid;
+    cursor: pointer;
+}
+
+.gameOverview.active {
   display: flex;
-  padding-left: 15px;
   color: var(--white);
-  padding: 10px 40px 10px 10px;
   background: var(--footer-gray);
+  border: none;
+  opacity: 1;
 }
 
-.scoreOverview {
-  padding: 10px;
-}
-
-.mainOverview .scoreOverview {
-  padding: 0;
-}
 
 .mainOverview .time {
   margin-top: 10px;
